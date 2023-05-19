@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Result;
 use App\Http\Livewire\Upload;
+use App\Http\Livewire\Summary;
 use App\Http\Livewire\Education;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\GuardianInformation;
@@ -37,6 +38,7 @@ Route::middleware(['auth', 'is_applicant'])->group(function () {
     Route::get('/education', Education::class)->name('education');
     Route::get('/result', Result::class)->name('result');
     Route::get('/uploads', Upload::class)->name('upload');
+    Route::get('/summary', Summary::class)->name('summary');
 });
 
 require __DIR__.'/auth.php';
