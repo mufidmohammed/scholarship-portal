@@ -84,4 +84,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Result::class);
     }
+
+    /**
+     * Get all of the uploads for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function uploads(): HasMany
+    {
+        return $this->hasMany(Upload::class);
+    }
 }

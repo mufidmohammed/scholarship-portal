@@ -14,7 +14,7 @@
             <a href="{{ route('result') }}" class="">Results</a>
         </li>
         <li class="bg-slate-900 hover:bg-slate-700 text-white px-6 py-4 mb-1 rounded w-full">
-            <a href="" class="">Uploads</a>
+            <a href="{{ route('upload') }}" class="">Uploads</a>
         </li>
     </ul>
 </div>
