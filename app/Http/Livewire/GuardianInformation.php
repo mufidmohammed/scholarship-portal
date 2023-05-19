@@ -58,4 +58,9 @@ class GuardianInformation extends Component
 
         session()->flash('message', 'Guardian information updated successfully');
     }
+
+    public function next()
+    {
+        return redirect()->route('education');
+    }
 }

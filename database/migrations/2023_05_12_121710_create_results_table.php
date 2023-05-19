@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
+            $table->string('exam_type');
+            $table->enum('subject_type', ['CORE', 'ELECTIVE']);
             $table->foreignId('grade_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('subject_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();

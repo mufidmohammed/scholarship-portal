@@ -87,8 +87,8 @@
                             </div>
                         </div>
                         <div class="flex justify-between mx-6">
-                            <x-primary-button wire:click.prevent="save">Save</x-primary-button>
-                            <x-primary-button>Next</x-primary-button>
+                            <x-primary-button wire:click="save">Save</x-primary-button>
+                            <x-primary-button wire:click="next">Next</x-primary-button>
                         </div>
                     </form>
                 </div>
