@@ -25,8 +25,8 @@ final class ApplicantTable extends PowerGridComponent
     public function setUp(): array
     {
         $this->showCheckBox();
-
         return [
+            /*
             Exportable::make('export')
                 ->striped()
                 ->type(Exportable::TYPE_XLS, Exportable::TYPE_CSV),
@@ -34,6 +34,7 @@ final class ApplicantTable extends PowerGridComponent
             Footer::make()
                 ->showPerPage()
                 ->showRecordCount(),
+            */
         ];
     }
 
@@ -169,8 +170,9 @@ final class ApplicantTable extends PowerGridComponent
     public function actions(): array
     {
        return [
-            Button::make('show', 'Details')
-                ->class('bg-indigo-600 cursor-pointer text-black px-3 py-2.5 m-1 rounded')
+            Button::make('show', 'details')
+                ->target('')
+                ->class('bg-indigo-600 cursor-pointer text-black px-3 py-2.5 m-1 rounded underline text-blue-500')
                 ->route('review.detail', ['id' => 'id']),
 
         //    Button::make('destroy', 'Delete')

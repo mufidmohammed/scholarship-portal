@@ -48,8 +48,9 @@ Route::middleware(['auth', 'is_applicant'])->group(function () {
 Route::middleware(['auth', 'is_reviewer'])->group(function () {
     Route::get('/review-applicants', [ReviewController::class, 'index'])->name('review.applicants');
     Route::get('/review-applicant/{id}', [ReviewController::class, 'show'])->name('review.detail');
+    Route::put('/review-grant/{id}', [ReviewController::class, 'grant'])->name('review.grant');
+    Route::put('/review-dismiss/{id}', [ReviewController::class, 'dismiss'])->name('review.dismiss');
 
-    // Route::get('/review-granted', [ReviewController::class, 'granted'])->name('review.granted');
     Route::get('/review-granted', function() {
         return view('review.granted');
     })->name('review.granted');

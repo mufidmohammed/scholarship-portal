@@ -25,7 +25,7 @@
                             {{ $applicant->personalInformation->lastname ?? '' }}
                         </div>
                         <div><span class="text-md font-semibold font-mono">Gender: </span>
-                            {{ $applicant->personalInformation->gender }}
+                            {{ $applicant->personalInformation->gender ?? '' }}
                         </div>
                         <div><span class="text-md font-semibold font-mono">Date of birth: </span>
                             {{ $applicant->personalInformation->date_of_birth ?? '' }}
@@ -106,14 +106,18 @@
                         <div class="basis-1/3 text-md font-semibold font-mono">Subject</div>
                         <div class="basis-1/3 text-md font-semibold font-mono">Grade</div>
                     </div>
-                    @foreach ($applicant->results()->get() as $result)
+                    @forelse ($applicant->results()->get() as $result)
                         <div class="mb-2">
                             <div class="flex flex-row">
                                 <div class="basis-1/3">{{ $result->subject->name }}</div>
                                 <div class="basis-1/3">{{ $result->grade->grade }}</div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <div class="mb-2 text-center">
+                            No records found
+                        </div>
+                    @endforelse
                 </div>
 
                 {{--   Uploads   --}}
@@ -133,6 +137,22 @@
                             </div>
                         </div>
                     @endforeach
+                </div>
+            </div>
+            <div class="flex">
+                <div class="px-2">
+                    <form method="post" action="{{ route('review.grant', $applicant) }}">
+                    @csrf
+                    @method('put')
+                    <x-primary-button type="submit" class="bg-green-500">Grant</x-primary-button>
+                    </form>
+                </div>
+                <div class="px-2">
+                    <form method="post" action="{{ route('review.dismiss', $applicant) }}">
+                    @csrf
+                    @method('put')
+                    <x-primary-button type="submit" class="bg-red-500">Dismiss</x-primary-button>
+                    </form>
                 </div>
             </div>
         </div>
