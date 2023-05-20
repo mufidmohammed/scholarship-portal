@@ -1,7 +1,14 @@
 <x-slot name="header">
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('Guardian Information') }}
-    </h2>
+    <div class="flex justify-between">
+        <div>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Guardian') }}
+            </h2>
+        </div>
+        <div>
+            @include('layouts.dropdown')
+        </div>
+    </div>
 </x-slot>
 
 <div class="py-12">
@@ -87,8 +94,8 @@
                             </div>
                         </div>
                         <div class="flex justify-between mx-6">
-                            <x-primary-button wire:click="save">Save</x-primary-button>
-                            <x-primary-button wire:click="next">Next</x-primary-button>
+                            <x-primary-button wire:click.prevent="save">Save</x-primary-button>
+                            <x-primary-button wire:click.prevent="next">Next</x-primary-button>
                         </div>
                     </form>
                 </div>

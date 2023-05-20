@@ -1,4 +1,15 @@
 <x-slot name="header">
+    <div class="flex justify-between">
+        <div>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Uploads') }}
+            </h2>
+        </div>
+        <div>
+            @include('layouts.dropdown')
+        </div>
+    </div>
+</x-slot><x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
         {{ __('Uploads') }}
     </h2>

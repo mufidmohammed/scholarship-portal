@@ -40,7 +40,12 @@ class Result extends Component
 
         session()->flash('message', 'Result uploaded successfully');
 
-        $this->reset();
+        // $this->reset();
+    }
+
+    public function next()
+    {
+        return to_route('summary');
     }
 
     public function destroy($id)

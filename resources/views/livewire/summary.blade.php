@@ -1,7 +1,14 @@
 <x-slot name="header">
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('Summary') }}
-    </h2>
+    <div class="flex justify-between">
+        <div>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Summary') }}
+            </h2>
+        </div>
+        <div>
+            @include('layouts.dropdown')
+        </div>
+    </div>
 </x-slot>
 
 <div class="py-12">
@@ -134,7 +141,7 @@
                     @endforeach
                 </div>
             </div>
-            <x-primary-button wire:click="submit">Submit Application</x-primary-button>
+            <x-primary-button wire:click="submit" class="bg-green-500">Submit Application</x-primary-button>
         </div>
     </div>
 </div>

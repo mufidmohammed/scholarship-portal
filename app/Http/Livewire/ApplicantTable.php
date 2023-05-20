@@ -148,8 +148,11 @@ final class ApplicantTable extends PowerGridComponent
     public function filters(): array
     {
         return [
-            Filter::inputText('username'),
-            Filter::datepicker('created_at_formatted', 'created_at'),
+            Filter::inputText('username')->operators(['contains']),
+            Filter::inputText('email')->operators(['contains']),
+            Filter::inputText('type')->operators(['contains']),
+            Filter::inputText('status')->operators(['contains']),
+            Filter::datetimepicker('created_at'),
         ];
     }
 
