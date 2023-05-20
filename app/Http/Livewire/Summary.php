@@ -22,6 +22,8 @@ class Summary extends Component
     {
         $this->applicant->submitted = true;
 
+        $this->applicant->save();
+
         session()->flash('message', 'Your application has been submitted successfully. You can now log out');
     }
 }
