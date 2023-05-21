@@ -61,8 +61,6 @@ class PersonalInformation extends Component
 
         $validated = $this->validate();
 
-        // dd($validated);
-
         $applicant->personalInformation()->updateOrCreate($validated);
 
         session()->flash('message', 'Personal information updated successfully');

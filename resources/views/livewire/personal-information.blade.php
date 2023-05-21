@@ -84,12 +84,9 @@
                         <div class="flex flex-wrap mx-3 mb-6">
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <x-input-label for="region" :value="__('Region')"></x-input-label>
-                                <x-text-select name="region" wire:model="region"
+                                <x-text-input name="region" wire:model="region"
                                     class="block mt-1 p-2 w-full border border-indigo-600">
-                                    <option value=""></option>
-                                    <option value="Northern">Northern</option>
-                                    <option value="Western">Western</option>
-                                </x-text-select>
+                                </x-text-input>
                             </div>
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <x-input-label for="city" :value="__('City')"></x-input-label>

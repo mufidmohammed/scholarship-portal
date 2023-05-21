@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function () {
         if (auth()->user()->type == 'reviewer') {
             return redirect()->route('review.applicants');
         }
-        return view('dashboard');
+        return redirect()->route('personal');
     })->name('dashboard');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
