@@ -25,7 +25,7 @@
                         <p class="text-sm font-bold">Upload all relevant documents including:</p>
                         <ul>
                             <li class="text-sm px-2 text-slate-500">Signed copy of application letter</li>
-                            <li class="text-sm px-2 text-slate-500"">SHS certificate</li>
+                            <li class="text-sm px-2 text-slate-500">SHS certificate</li>
                             <li class="text-sm px-2 text-slate-500">Testimonial</li>
                         </ul>
                     </div>
