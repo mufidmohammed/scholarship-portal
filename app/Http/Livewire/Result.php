@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use App\Models\Grade;
 use App\Models\Subject;
 use Livewire\Component;
+use Illuminate\Validation\Rule;
+use Illuminate\Database\Query\Builder;
 
 class Result extends Component
 {
@@ -13,12 +15,17 @@ class Result extends Component
     public $subject_id;
     public $grade_id;
 
-    protected $rules = [
-        'exam_type' => 'required|string',
-        'subject_type' => 'required|string',
-        'subject_id' => 'required|unique:results',
-        'grade_id' => 'required',
-    ];
+    public function rules()
+    {
+        $id = \Illuminate\Support\Facades\Auth::user()->id;
+        return [
+            'exam_type' => ['required', 'string'],
+            'subject_type' => ['required', 'string'],
+            'subject_id' => ['required', Rule::unique('results')
+                ->where(fn (Builder $query) => $query->where('user_id', $id))],
+            'grade_id' => ['required']
+        ];
+    }
 
     public function render()
     {

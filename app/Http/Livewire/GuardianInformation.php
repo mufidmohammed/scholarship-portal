@@ -54,7 +54,9 @@ class GuardianInformation extends Component
 
         $applicant = auth()->user();
 
-        $applicant->guardian()->updateOrCreate($info);
+        \App\Models\GuardianInformation::updateOrCreate(
+            ['user_id' => $applicant->id], $info
+        );
 
         session()->flash('message', 'Guardian information updated successfully');
     }
