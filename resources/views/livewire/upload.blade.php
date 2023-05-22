@@ -25,6 +25,15 @@
                     @include('partials.sidebar-menu')
                 </div>
                 <div class="flex-1 py-8 px-6">
+                    <div class="py-4 px-2">
+                        <p class="text-sm font-bold">Upload all relevant documents including:</p>
+                        <ul class="list-disc">
+                            <li class="text-sm px-2 text-slate-500">Signed copy of application letter</li>
+                            <li class="text-sm px-2 text-slate-500"">SHS certificate</li>
+                            <li class="text-sm px-2 text-slate-500">Testimonial</li>
+                        </ul>
+                    </div>
+
                     <form method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="grid md:grid-rows-2 gap-6">

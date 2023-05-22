@@ -52,7 +52,7 @@ class Result extends Component
 
     public function next()
     {
-        return to_route('summary');
+        return to_route('upload');
     }
 
     public function destroy($id)

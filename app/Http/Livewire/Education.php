@@ -38,6 +38,13 @@ class Education extends Component
         $this->reset();
     }
 
+    public function destroy($id)
+    {
+        \App\Models\Education::destroy($id);
+
+        session()->flash('message', 'Education history deleted successfully');
+    }
+
     public function next()
     {
         return redirect()->route('result');
@@ -45,6 +52,8 @@ class Education extends Component
 
     public function render()
     {
-        return view('livewire.education');
+        $education = auth()->user()->education()->get();
+
+        return view('livewire.education', compact('education'));
     }
 }

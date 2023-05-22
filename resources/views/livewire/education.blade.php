@@ -72,4 +72,77 @@
             </div>
         </div>
     </div>
+    <div class="py-6">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <div class="flex flex-col">
+                        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                                <div class="overflow-hidden">
+                                    <table class="w-full">
+                                        <thead class="bg-white border-b">
+                                        <tr>
+
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                                Level
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                                Name of school
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                                Position held
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                                Actions
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        @forelse($education as $edu)
+                                            <tr class="bg-gray-100 border-b">
+
+                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                    {{ $edu->level }}
+                                                </td>
+                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                    {{ $edu->name_of_school }}
+                                                </td>
+                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                    {{ $edu->position_held }}
+                                                </td>
+
+                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+
+                                                    <button
+                                                        onclick="return confirm('Are you sure you want to delete this education history?') || event.stopImmediatePropagation();"
+                                                        wire:click="destroy({{ $edu->id }})"
+                                                        class="hover:bg-red-600 rounded-lg hover:text-white text-red-600 font-semibold border border-red-300 px-4 py-2">
+                                                        Delete
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        @empty
+                                            <tr class="text-center">
+                                                <td colspan="6">
+                                                    <p>No records found</p>
+                                                </td>
+                                            </tr>
+                                        @endforelse
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
