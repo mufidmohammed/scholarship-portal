@@ -9,10 +9,6 @@
             @include('layouts.dropdown')
         </div>
     </div>
-</x-slot><x-slot name="header">
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('Uploads') }}
-    </h2>
 </x-slot>
 
 <div class="py-12">

@@ -47,7 +47,7 @@ class Upload extends Component
 
     public function next()
     {
-        // return redirect()->route('summary');
+        return redirect()->route('summary');
     }
 
     public function remove($id)
