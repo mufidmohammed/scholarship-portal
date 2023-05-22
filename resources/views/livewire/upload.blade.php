@@ -27,7 +27,7 @@
                 <div class="flex-1 py-8 px-6">
                     <div class="py-4 px-2">
                         <p class="text-sm font-bold">Upload all relevant documents including:</p>
-                        <ul class="list-disc">
+                        <ul>
                             <li class="text-sm px-2 text-slate-500">Signed copy of application letter</li>
                             <li class="text-sm px-2 text-slate-500"">SHS certificate</li>
                             <li class="text-sm px-2 text-slate-500">Testimonial</li>
@@ -64,9 +64,8 @@
                             </div>
 
                             <div class="flex justify-between">
-                                <x-primary-button wire:click.prevent="add" class="bg-green-500">Add</x-primary-button>
-                                <x-primary-button wire:click.prevent="next" class="bg-blue-500">Next
-                                </x-primary-button>
+                                <x-primary-button wire:click.prevent="add">Add</x-primary-button>
+                                <x-primary-button wire:click.prevent="next">Next</x-primary-button>
                             </div>
                         </div>
                     </form>
