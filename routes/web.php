@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Http\Livewire\Detail;
 use App\Http\Livewire\Result;
 use App\Http\Livewire\Upload;
@@ -65,11 +66,13 @@ Route::middleware(['auth', 'is_reviewer'])->prefix('review')->group(function () 
     Route::put('dismiss/{id}', [ReviewController::class, 'dismiss'])->name('review.dismiss');
 
     Route::get('granted', function() {
-        return view('review.granted');
+        $granted = User::where('status', 'granted')->get();
+        return view('review.granted', compact('granted'));
     })->name('review.granted');
 
     Route::get('dismissed', function() {
-        return view('review.dismissed');
+        $dismissed = User::where('status', 'dismissed')->get();
+        return view('review.dismissed', compact('dismissed'));
     })->name('review.dismissed');
 
 });

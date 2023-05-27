@@ -9,7 +9,11 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        return view('review.applicants');
+        $applicants = User::where('type', 'applicant')
+                    ->where('submitted', true)
+                    ->get();
+
+        return view('review.applicants', compact('applicants'));
     }
 
     public function show($id)

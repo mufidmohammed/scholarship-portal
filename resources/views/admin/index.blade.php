@@ -15,9 +15,10 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <p class="px-6 py-2 font-bold">All Reviewers</p>
                 <div class="px-4 py-2">
                     <a href="{{ route('admin.create') }}">
-                        <x-primary-button>Add</x-primary-button>
+                        <x-primary-button class="bg-blue-500">Add</x-primary-button>
                     </a>
                 </div>
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -57,7 +58,8 @@
                                         </a>
                                     </div>
                                     <div class="px-2">
-                                        <form method="post" action="{{ route('admin.destroy', $reviewer->id) }}">
+                                        <form method="post" action="{{ route('admin.destroy', $reviewer->id) }}"
+                                            onsubmit="return confirm('Are you sure you want to delete reviewer?') && event.stopImmediatePropagation()">
                                             @csrf
                                             @method('delete')
                                             <x-primary-button class="bg-red-500">delete</x-primary-button>
