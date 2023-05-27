@@ -16,16 +16,6 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        <!-- User Type -->
-        <div class="mt-4">
-            <x-input-label for="type" :value="__('Email')" />
-            <x-text-select id="type" class="block mt-1 w-full" name="type" :value="old('type')" required autocomplete="username">
-                <option value="applicant">Applicant</option>
-                <option value="reviewer">Reviewer</option>
-            </x-text-select>
-            <x-input-error :messages="$errors->get('type')" class="mt-2" />
-        </div>
-
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
