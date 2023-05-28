@@ -25,7 +25,7 @@
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                ID
+                                #
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Username
@@ -42,7 +42,7 @@
                         @forelse ($reviewers as $reviewer)
                         <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                             <td class="px-6 py-4">
-                                {{ $reviewer->id }}
+                                {{ $loop->iteration }}
                             </td>
                             <td class="px-6 py-4">
                                 {{ $reviewer->username }}
