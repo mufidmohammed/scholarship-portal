@@ -33,13 +33,13 @@
                         @forelse ($applicants as $applicant)
                             <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                 <td class="px-6 py-4">
-                                    {{ $applicant->personalInformation->lastname . ' ' . $applicant->personalInformation->middlename . ' ' . $applicant->personalInformation->firstname }}
+                                    {{ $applicant->personalInformation?->lastname . ' ' . $applicant->personalInformation?->middlename . ' ' . $applicant->personalInformation?->firstname }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $applicant->personalInformation->email }}
+                                    {{ $applicant->personalInformation?->email }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $applicant->personalInformation->phone_number }}
+                                    {{ $applicant->personalInformation?->phone_number }}
                                 </td>
                                 <td class="px-6 py-4">
                                     {{ $applicant->status }}

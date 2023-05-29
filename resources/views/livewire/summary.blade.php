@@ -31,7 +31,7 @@
                             {{ $applicant->personalInformation->lastname ?? '' }}
                         </div>
                         <div><span class="text-md font-semibold font-mono">Gender: </span>
-                            {{ $applicant->personalInformation->gender }}
+                            {{ $applicant->personalInformation->gender ?? '' }}
                         </div>
                         <div><span class="text-md font-semibold font-mono">Date of birth: </span>
                             {{ $applicant->personalInformation->date_of_birth ?? '' }}

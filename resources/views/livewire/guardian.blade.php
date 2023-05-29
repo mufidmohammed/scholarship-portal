@@ -46,7 +46,7 @@
                             </div>
                             <div class="w-full md:w-1/2 px-3">
                                 <x-input-label for="email" :value="__('Email')"></x-input-label>
-                                <x-text-input name="email" wire:model="email"
+                                <x-text-input name="email" wire:model="email" placeholder="Optional"
                                     class="block mt-1 p-2 w-full border border-indigo-600">
                                 </x-text-input>
                             </div>

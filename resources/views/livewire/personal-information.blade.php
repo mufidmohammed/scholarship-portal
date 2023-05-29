@@ -40,7 +40,7 @@
                         <div class="flex flex-wrap mx-3 mb-6">
                             <div class="w-full md:w-1/2 px-3">
                                 <x-input-label for="middlename" :value="__('Middle name')"></x-input-label>
-                                <x-text-input name="middlename" wire:model="middlename"
+                                <x-text-input name="middlename" wire:model="middlename" placeholder="Optional"
                                     class="block mt-1 p-2 w-full border border-indigo-600">
                                 </x-text-input>
                             </div>
