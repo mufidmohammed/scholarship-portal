@@ -20,7 +20,9 @@
 
             @if (auth()->user()->type == 'reviewer')
                 @include('layouts.navigation')
-            @endauth
+            @elseif (auth()->user()->type == 'admin')
+                @include('layouts.admin-navigation')
+            @endif
 
             <!-- Page Heading -->
             @if (isset($header))

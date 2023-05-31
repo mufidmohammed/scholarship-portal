@@ -24,10 +24,6 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
 Route::get('/', function () {
     return redirect()->route('login');
 });;
@@ -41,7 +37,7 @@ Route::middleware(['auth'])->group(function () {
         else if (auth()->user()->type == 'applicant') {
             return redirect()->route('personal');
         } else {
-            return to_route('admin.index');
+            return to_route('admin.dashboard');
         }
     })->name('dashboard');
 
@@ -78,6 +74,7 @@ Route::middleware(['auth', 'is_reviewer'])->prefix('review')->group(function () 
 });
 
 Route::middleware(['auth', 'is_admin'])->group(function () {
+    Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::resource('admin', AdminController::class)->except('show');
 });
 

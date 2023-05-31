@@ -88,9 +88,30 @@ class AdminController extends Controller
      */
     public function destroy(string $id)
     {
-        dd('destroy...');
         User::destroy($id);
 
         return back();
+    }
+
+    public function dashboard()
+    {
+        $users = User::count() - 1;
+        $reviewers = User::where('type', 'reviewer')->count();
+        $applicants = User::where('type', 'applicant')->where('submitted', true)->count();
+        $pending = User::where('type', 'applicant')
+                ->where('submitted', 'true')
+                ->where('status', 'pending')
+                ->count();
+        $granted = User::where('type', 'applicant')
+                ->where('submitted', 'true')
+                ->where('status', 'granted')
+                ->count();
+
+        $dismissed = User::where('type', 'applicant')
+                ->where('submitted', 'true')
+                ->where('status', 'dismissed')
+                ->count();
+
+        return view('admin.dashboard', compact('users', 'reviewers', 'applicants', 'pending', 'granted', 'dismissed'));
     }
 }

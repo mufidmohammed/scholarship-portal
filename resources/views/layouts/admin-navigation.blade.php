@@ -4,18 +4,13 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('review.applicants')" :active="request()->routeIs('review.applicants')">
-                        {{ __('All Applicants') }}
+                    <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
+                        {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('review.granted')" :active="request()->routeIs('review.granted')">
-                        {{ __('Granted') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('review.dismissed')" :active="request()->routeIs('review.dismissed')">
-                        {{ __('Dismissed') }}
+                    <x-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.index')">
+                        {{ __('Reviewers') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -69,18 +64,13 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('review.applicants')" :active="request()->routeIs('review.applicants')">
-                {{ __('All Applicants') }}
+            <x-responsive-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
+                {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('review.granted')" :active="request()->routeIs('review.granted')">
-                {{ __('Granted') }}
-            </x-responsive-nav-link>
-        </div>
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('review.dismissed')" :active="request()->routeIs('review.dismissed')">
-                {{ __('Dismissed') }}
+            <x-responsive-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.index')">
+                {{ __('Reviewers') }}
             </x-responsive-nav-link>
         </div>
 
