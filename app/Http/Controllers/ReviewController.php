@@ -55,10 +55,10 @@ class ReviewController extends Controller
 
     public function send_sms_notification($phone_number, $name, $financial_need)
     {
-        $key = 'nDclGgrtfEyGTgLCEOJ8FC10y';
+        $key = env('MNOTIFY_KEY');
+        $sender_id = env('MNOTIFY_SENDER_ID');
         $to = $phone_number;
         $message = "Dear $name, we are glad to inform you that your scholarship request for $financial_need has been granted successfully.\n\nGood luck!!!";
-        $sender_id = 'Scholarship';
         $message = urlencode($message);
 
         $url = "https://apps.mnotify.net/smsapi?key=$key&to=$to&msg=$message&sender_id=$sender_id";

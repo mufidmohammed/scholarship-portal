@@ -1,14 +1,22 @@
 # Scholarship portal
 
+
 ## Requirements
 * PHP 8.1 and above
 * Recommended IDE - VScode or PHPStorm
+
 
 ## Setup
 * Migrate the database
 ```shell
 php artisan migrate
 ```
+- Or run
+```shell
+php artisan migrate:fresh
+```
+- to recreate all existing tables in the database
+
 * Seed data
 ```shell
 php artisan db:seed
