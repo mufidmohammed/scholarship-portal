@@ -20,7 +20,7 @@ class GuardianInformation extends Component
         'firstname' => 'required|string',
         'lastname' => 'required|string',
         'phone_number' => 'required|numeric',
-        'email' => 'required|email',
+        'email' => 'nullable|email',
         'address' => 'required|string',
         'region' => 'required|string',
         'city' => 'required|string',
