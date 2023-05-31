@@ -98,17 +98,19 @@ class AdminController extends Controller
         $users = User::count() - 1;
         $reviewers = User::where('type', 'reviewer')->count();
         $applicants = User::where('type', 'applicant')->where('submitted', true)->count();
+
         $pending = User::where('type', 'applicant')
-                ->where('submitted', 'true')
+                ->where('submitted', true)
                 ->where('status', 'pending')
                 ->count();
+
         $granted = User::where('type', 'applicant')
-                ->where('submitted', 'true')
+                ->where('submitted', true)
                 ->where('status', 'granted')
                 ->count();
 
         $dismissed = User::where('type', 'applicant')
-                ->where('submitted', 'true')
+                ->where('submitted', true)
                 ->where('status', 'dismissed')
                 ->count();
 
