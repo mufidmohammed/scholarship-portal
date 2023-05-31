@@ -25,6 +25,11 @@ class ReviewController extends Controller
 
     public function grant($id)
     {
+        if (! $this->checkInternetConnection() )
+        {
+            return back()->with('error_message', 'No internet access');
+        }
+
         $applicant = User::find($id);
         if ($applicant->status == 'granted')
         {
@@ -64,6 +69,17 @@ class ReviewController extends Controller
         $url = "https://apps.mnotify.net/smsapi?key=$key&to=$to&msg=$message&sender_id=$sender_id";
 
         file_get_contents($url);
+    }
+
+    public function checkInternetConnection() {
+        $url = 'https://www.google.com'; // URL of a known website
+        $headers = @get_headers($url); // Use @ to suppress any warnings or errors
+
+        if ($headers && strpos($headers[0], '200') !== false) {
+            return true; // Internet connection is available
+        } else {
+            return false; // No internet connection
+        }
     }
 
 }
