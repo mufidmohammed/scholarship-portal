@@ -1,4 +1,59 @@
-<x-slot name="header">
+<section>
+    <div class="row">
+        <div class="col-md-4">
+            <span class="text-danger">
+                *Accepted format: pdf,jpeg,jpg,png files only <br>
+                NB: Choose the appropriate document type for the file you are uploading.
+            </span><br>
+            <div class="form-group">
+                <label>Document type</label>
+                <select class="form-control" name="doctype">
+                    <option></option>
+                    <option>Birth certificate</option>
+                    <option>Certificate</option>
+                </select>
+            </div>
+            <div class='form-group'>
+                <label></label>
+                <input type='file'
+                    accept="image/png, image/jpeg,image/jpg,application/pdf"
+                    class="form-control" name="file">
+            </div>
+            <div class="form-group">
+                <button class='btn btn-success-light'
+                    onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('confirm upload');"
+                    data-cf-modified-fa05c64ad5150df386618eaf-="">upload</button>
+            </div>
+
+        </div>
+        <div class="col-12 col-lg-8">
+            <div class="table-responsive">
+                <table class="table mb-0">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">S/N</th>
+                            <th scope="col">Doc. Type</th>
+                            <th scope="col">Date Uploaded</th>
+                            <th scope="col">Action</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Certificate</td>
+                            <td>2021-04-21</td>
+                            <td><a href="#">view</a></td>
+                            <td><a href="#">delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- <x-slot name="header">
     <div class="flex justify-between">
         <div>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -98,4 +153,4 @@
         </div>
     </div>
 </div>
-
+ --}}

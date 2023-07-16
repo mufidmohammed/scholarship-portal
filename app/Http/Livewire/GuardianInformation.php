@@ -45,7 +45,7 @@ class GuardianInformation extends Component
 
     public function render()
     {
-        return view('livewire.guardian');
+        return view('livewire.guardian-information');
     }
 
     public function save()

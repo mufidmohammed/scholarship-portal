@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\View\Components\MainLayout;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use PowerComponents\LivewirePowerGrid\Themes\Components\Layout;
 
 class PersonalInformation extends Component
 {

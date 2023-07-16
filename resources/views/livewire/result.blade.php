@@ -1,4 +1,1891 @@
-<x-slot name="header">
+<section>
+    <div class="row">
+        <div class="col-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h4 class="box-title">Examination History</h4>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Examination seating 1</th>
+                                    <th scope="col">Examination seating 2(if
+                                        available)</th>
+                                    <th scope="col">Examination seating 3(if
+                                        avialable)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- first Exam -->
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address"
+                                                placeholder="index number">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address"
+                                                placeholder="index number">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address"
+                                                placeholder="index number">
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Second Exam -->
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control"
+                                                name="postal_address"
+                                                placeholder="examination year">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control"
+                                                name="postal_address"
+                                                placeholder="examination year">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control"
+                                                name="postal_address"
+                                                placeholder="examination year">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <br><br>
+                        <h4 class="box-title">Examination Results</h4>
+                        <div class="row">
+                            <div class="col-md-4" style="border: 1px solid black">
+                                <h6 class="box-title text-info">Seating 1</h6>
+                                <table class="table mx-0 mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Results</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>English Language</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics(core)</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Integrated Science</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Social Studies</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2"
+                                                style="font-weight:bolder;">Choose
+                                                Electives and results</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4" style="border: 1px solid black">
+                                <h6 class="box-title text-info">Seating 2(if available)
+                                </h6>
+                                <table class="table mx-0 mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Results</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>English Language</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics(core)</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Integrated Science</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Social Studies</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2"
+                                                style="font-weight:bolder;">Choose
+                                                Electives and results</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4" style="border: 1px solid black">
+                                <h6 class="box-title text-info">Seating 3(if available)
+                                </h6>
+                                <table class="table mx-0 mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Results</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>English Language</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics(core)</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Integrated Science</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Social Studies</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2"
+                                                style="font-weight:bolder;">Choose
+                                                Electives and results</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="from-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="electivecourse11">
+                                                        <option></option>
+                                                        <option>General Agriculture
+                                                        </option>
+                                                        <option>Animal Husbandry
+                                                        </option>
+                                                        <option>Crop Husbandry and
+                                                            Horticulture</option>
+                                                        <option>Fisheries</option>
+                                                        <option>Forestry</option>
+                                                        <option>Biology</option>
+                                                        <option>Physics</option>
+                                                        <option>Mathematics (Elective)
+                                                        </option>
+                                                        <option>Geography</option>
+                                                        <option>Music</option>
+                                                        <option>ICT (Elective)</option>
+                                                        <option>Business Management
+                                                        </option>
+                                                        <option>Financial Accounting
+                                                        </option>
+                                                        <option>Principles of Cost
+                                                            Accounting</option>
+                                                        <option>Economics</option>
+                                                        <option>Typewriting (40wpm)
+                                                        </option>
+                                                        <option>Clerical Office Duties
+                                                        </option>
+                                                        <option>Literature in English
+                                                        </option>
+                                                        <option>Technical Drawing
+                                                        </option>
+                                                        <option>Applied Electricity
+                                                        </option>
+                                                        <option>Auto Mechanics</option>
+                                                        <option>Building Construction
+                                                        </option>
+                                                        <option>Electronics</option>
+                                                        <option>Metalwork</option>
+                                                        <option>Woodwork</option>
+                                                        <option>Chemistry</option>
+                                                        <option>French</option>
+                                                        <option>Management-In-Living
+                                                        </option>
+                                                        <option>Clothing and Textiles
+                                                        </option>
+                                                        <option>Foods and Nutrition
+                                                        </option>
+                                                        <option>General Knowledge-In-Art
+                                                        </option>
+                                                        <option>Textiles</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Picture Making</option>
+                                                        <option>Basketry</option>
+                                                        <option>Ceramics</option>
+                                                        <option>Jewellery</option>
+                                                        <option>Leatherwork</option>
+                                                        <option>Sculpture</option>
+                                                        <option>Literature-in English
+                                                        </option>
+                                                        <option>Christian Religious
+                                                            Studies</option>
+                                                        <option>Arabic</option>
+                                                        <option>Government</option>
+                                                        <option>History </option>
+                                                        <option>Islamic Religious
+                                                            Studies</option>
+                                                        <option>West Africa Traditional
+                                                            Religion</option>
+                                                        <option>Dagaare</option>
+                                                        <option>Dagbani</option>
+                                                        <option>Dangme</option>
+                                                        <option>Ewe</option>
+                                                        <option>Ga</option>
+                                                        <option>Gonja</option>
+                                                        <option>Kasem</option>
+                                                        <option>Nzema</option>
+                                                        <option>Twi (Akuapem)</option>
+                                                        <option>Twi (Asante)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select
+                                                        class="form-control select2"
+                                                        style='width:100px'
+                                                        name="coreresult11">
+                                                        <option></option>
+                                                        <option>A1</option>
+                                                        <option>B2</option>
+                                                        <option>B3</option>
+                                                        <option>C4</option>
+                                                        <option>C5</option>
+                                                        <option>C6</option>
+                                                        <option>D7</option>
+                                                        <option>E8</option>
+                                                        <option>F9</option>
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                        <option>E</option>
+                                                        <option>F</option>
+                                                        <option>Awaiting Results
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{{-- <x-slot name="header">
     <div class="flex justify-between">
         <div>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -148,4 +2035,4 @@
         </div>
     </div>
 </div>
-
+ --}}

@@ -18,11 +18,11 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
 
-            @if (auth()->user()->type == 'reviewer')
+            {{-- @if (auth()->user()->type == 'reviewer')
                 @include('layouts.navigation')
             @elseif (auth()->user()->type == 'admin')
                 @include('layouts.admin-navigation')
-            @endif
+            @endif --}}
 
             <!-- Page Heading -->
             @if (isset($header))

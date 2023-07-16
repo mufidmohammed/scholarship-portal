@@ -47,7 +47,7 @@ class AdminController extends Controller
             'type' => 'reviewer'
         ]);
 
-        return to_route('admin.index');
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -80,7 +80,7 @@ class AdminController extends Controller
 
         $reviewer->save();
 
-        return to_route('admin.index');
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -115,5 +115,14 @@ class AdminController extends Controller
                 ->count();
 
         return view('admin.dashboard', compact('users', 'reviewers', 'applicants', 'pending', 'granted', 'dismissed'));
+    }
+
+    public function applicants()
+    {
+        $applicants = User::where('type', 'applicant')
+                    ->where('submitted', true)
+                    ->get();
+
+        return view('admin.applicants', compact('applicants'));
     }
 }

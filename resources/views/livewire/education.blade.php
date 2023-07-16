@@ -1,4 +1,139 @@
-<x-slot name="header">
+<section>
+    <div class="row">
+        <div class="col-12">
+            <div class="box">
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th scope="col">Name of Institution</th>
+                                    <th scope="col">Region</th>
+                                    <th scope="col">District</th>
+                                    <th scope="col">From</th>
+                                    <th scope="col">To</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- first school -->
+                                <tr>
+                                    <th>1</th>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- second school -->
+                                <tr>
+                                    <th>2</th>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- third school -->
+                                <tr>
+                                    <th>3</th>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                name="postal_address">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+
+
+{{-- <x-slot name="header">
     <div class="flex justify-between">
         <div>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -145,4 +280,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

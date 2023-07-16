@@ -1,41 +1,62 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<x-main-layout>
+    <div class="container-fluid content-top-gap">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Total Users Card -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-lg font-semibold mb-4">Total Users</h3>
-                    <p class="text-gray-600">{{ $users }}</p>
-                </div>
-                <!-- Number of Reviewers -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-lg font-semibold mb-4">Number of Reviewers</h3>
-                    <p class="text-gray-600">{{ $reviewers }}</p>
-                </div>
-                <!-- Total Profit Card -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-lg font-semibold mb-4">Number of Applicants</h3>
-                    <p class="text-gray-600">{{ $applicants }}</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-lg font-semibold mb-4">Number of pending applicants</h3>
-                    <p class="text-gray-600">{{ $pending }}</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-lg font-semibold mb-4">Granted</h3>
-                    <p class="text-gray-600">{{ $granted }}</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-lg font-semibold mb-4">Dismissed</h3>
-                    <p class="text-gray-600">{{ $dismissed }}</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </nav>
+
+        <div class="statistics">
+            <div class="row">
+                <div class="col-xl-12 pr-xl-2">
+                    <div class="row">
+                        <div class="col-sm-4 pr-sm-2 statistics-grid">
+                            <div class="card card_border border-primary-top p-4">
+                                <i class="lnr lnr-users"> </i>
+                                <h3 class="text-primary number">{{ $users }}</h3>
+                                <p class="stat-text">Total Users</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pr-sm-2 statistics-grid">
+                            <div class="card card_border border-primary-top p-4">
+                                <i class="lnr lnr-users"> </i>
+                                <h3 class="text-primary number">{{ $reviewers }}</h3>
+                                <p class="stat-text">Reviewers</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pr-sm-2 statistics-grid">
+                            <div class="card card_border border-primary-top p-4">
+                                <i class="lnr lnr-tag"> </i>
+                                <h3 class="text-secondary number">{{ $applicants }}</h3>
+                                <p class="stat-text">Applicants</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pr-sm-2 statistics-grid">
+                            <div class="card card_border border-primary-top p-4">
+                                <i class="lnr lnr-eye"> </i>
+                                <h3 class="text-secondary number">{{ $pending }}</h3>
+                                <p class="stat-text">Pending Applicants</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pr-sm-2 statistics-grid">
+                            <div class="card card_border border-primary-top p-4">
+                                <i class="lnr lnr-file-add"> </i>
+                                <h3 class="text-primary number">{{ $granted }}</h3>
+                                <p class="stat-text">Granted</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pr-sm-2 statistics-grid">
+                            <div class="card card_border border-primary-top p-4">
+                                <i class="lnr lnr-trash"> </i>
+                                <h3 class="text-primary number">{{ $dismissed }}</h3>
+                                <p class="stat-text">Dismissed</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-main-layout>
