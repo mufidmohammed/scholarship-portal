@@ -1,152 +1,100 @@
-<section>
-    <h5 class="text-dark font-weight-bold">Personal Information</h5>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="firstName1">Academic Year of admission <span class="danger">*</span> :</label>
-                <select class="form-control select2" style="width: 100%;">
-                    <option selected="" style="cursor: not-allowed;">Year</option>
-                    <option>2021</option>
-                    <option>2020</option>
-                    <option>2019</option>
-                    <option>2018</option>
-                    <option>2017</option>
-                    <option>2016</option>
-                </select>
+<div class="content-fluid content-top-gap">
+    <x-validation-errors></x-validation-errors>
+    <x-success-message></x-success-message>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="text-dark font-weight-bold">Personal Information</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="firstname">First Name <span class="text-danger">*</span> :</label>
+                        <input type="text" class="form-control" id="firstname" name="firstname"
+                            wire:model="firstname">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="lastname">Last Name <span class="text-danger">*</span> :</label>
+                        <input type="text" class="form-control" id="lastname" name="lastname" wire:model="lastname">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="lastName2">Other names :</label>
-                <input type="text" class="form-control" id="lastName2">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="middlename">Other Names :</label>
+                        <input type="text" class="form-control" id="middlename" name="middlename"
+                            wire:model="middlename">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phone_number">Phone Number <span class="text-danger">*</span> :</label>
+                        <input type="text" class="form-control" id="phone_number" name="phone_number"
+                            wire:model="phone_number">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="firstName1">Surname <span class="danger">*</span> :</label>
-                <input type="text" class="form-control" id="firstName1" placeholder="Enter your surname">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email <span class="text-danger">*</span> :</label>
+                        <input type="text" class="form-control" id="email" name="email" wire:model="email">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="address">Address <span class="text-danger">*</span> :</label>
+                        <input type="text" class="form-control" id="address" name="address" wire:model="address">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <label>Date of Birth</label>
-            <input class="form-control" type="date" name="date">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="firstName1">Gender <span class="danger">*</span> :</label>
-                <select class="form-control select2" style="width: 100%;">
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Other</option>
-                </select>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="gender">Gender <span class="text-danger">*</span> :</label>
+                        <select class="form-control select2" style="width: 100%;" wire:model="gender">
+                            <option value=""></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="date_of_birth">Date_of_birth <span class="text-danger">*</span> :</label>
+                        <input type="date" class="form-control" id="date_of_birth" name="date_of_birth"
+                            wire:model="date_of_birth">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="lastName2">Home District :</label>
-                <input type="text" class="form-control" id="lastName2" placeholder="Enter your district">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="region">Region <span class="text-danger">*</span> :</label>
+                        <input type="text" class="form-control" id="region" name="region" wire:model="region">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="city">City <span class="text-danger">*</span> :</label>
+                        <input type="text" class="form-control" id="city" name="city" wire:model="city">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="firstName1">Place of Birth <span class="danger">*</span>
-                    :</label>
-                <input type="text" class="form-control" id="firstName1">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="financial_need">Financial Need <span class="text-danger">*</span> :</label>
+                        <input type="text" class="form-control" id="financial_need" name="financial_need"
+                            wire:model="financial_need">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="lastName2">Sub-Counctry :</label>
-                <input type="text" class="form-control" id="lastName2">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="emailAddress2">Home Country :</label>
-                <input type="email" class="form-control" id="emailAddress2">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="phoneNumber2">Citizenship :</label>
-                <input type="tel" class="form-control" id="phoneNumber2">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="emailAddress2">Home Village :</label>
-                <input type="email" class="form-control" id="emailAddress2">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="phoneNumber2">Religious Affiliation :</label>
-                <select class="form-control select2" style="width: 100%;">
-                    <option>Christian</option>
-                    <option>Muslim</option>
-                    <option>Traditionalist</option>
-                    <option>Budhist</option>
-                    <option>Other</option>
-                </select>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-success" wire:click.prevent="save">Save</button>
+                <button class="btn btn-secondary" wire:click.prevent="next">Next</button>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="emailAddress2">Country of Residence :</label>
-                <input type="email" class="form-control" id="emailAddress2">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="phoneNumber2">Marital Status :</label>
-                <select class="form-control select2" style="width: 100%;">
-                    <option>Single</option>
-                    <option>Married</option>
-                    <option>Divorced</option>
-                    <option>Widow</option>
-                    <option>Prefer not say</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="emailAddress2">Contact Number :</label>
-                <input type="email" class="form-control" id="emailAddress2">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="phoneNumber2">Contact Address :</label>
-                <input type="email" class="form-control" id="emailAddress2">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="emailAddress2">Permanent Address :</label>
-                <textarea rows="5" class="form-control" placeholder="About Project"></textarea>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="phoneNumber2">Select profile pic. :</label>
-                <input type="file" class="form-control">
-            </div>
-        </div>
-    </div>
-</section>
+</div>

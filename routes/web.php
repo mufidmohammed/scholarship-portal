@@ -23,10 +23,6 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/apply', function () {
-    return view('application.index');
-});
-
 Route::get('/', function () {
     return redirect()->route('login');
 });;

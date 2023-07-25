@@ -36,16 +36,15 @@
             @include('partials.sidebar-admin')
         @elseif (auth()->user()->type == 'reviewer')
             @include('partials.sidebar-reviewer')
-        {{-- @else --}}
-            {{-- @include('partials.sidebar-applicant') --}}
+        @else
+            @include('partials.sidebar-applicant')
         @endif
 
-        <!-- //sidebar menu end -->
-        <!-- header-starts -->
-
-        @unless (auth()->user()->type == 'applicant')
+        @if (auth()->user()->type == 'applicant')
+            @include('partials.header-applicant')
+        @else
             @include('partials.header')
-        @endunless
+        @endif
 
         <!-- //header-ends -->
         <!-- main content start -->

@@ -54,7 +54,7 @@ class PersonalInformation extends Component
 
     public function render()
     {
-        return view('livewire.personal-information');
+        return view('livewire.personal-information')->layout('layouts.main');
     }
 
     public function save()

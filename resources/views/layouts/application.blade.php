@@ -22,10 +22,8 @@
 </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
-
     <div class="wrapper">
         <div id="loader"></div>
-
         <div class="content px-2">
             <div class="container-xxx mx-0">
                 <!-- Main content -->
@@ -36,7 +34,10 @@
                             <h4 class="box-title">Student Application</h4>
                             <h6 class="box-subtitle">Complete the form below</a></h6>
                             <div class="pull-right">
-                                <button class="btn btn-primary">Save</button>
+                                <form action="{{ route('logout') }}" method="post">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary">Logout</button>
+                                </form>
                             </div>
                         </div>
                         <!-- /.box-header -->

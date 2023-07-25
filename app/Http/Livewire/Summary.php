@@ -15,7 +15,7 @@ class Summary extends Component
 
     public function render()
     {
-        return view('livewire.summary');
+        return view('livewire.summary')->layout('layouts.main');
     }
 
     public function submit()
