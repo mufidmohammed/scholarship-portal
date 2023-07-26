@@ -221,7 +221,10 @@
                         </tbody>
                     </table>
                 </div>
-                <button class="btn btn-primary" wire:click="submit">Submit Application</button>
+                <button class="btn btn-primary"
+                    onclick="return confirm('You are about to submit your application. Proceed?') || event.stopImmediatePropagation();" wire:click="submit">
+                    Submit Application
+                </button>
             </section>
         </div>
         <x-success-message></x-success-message>

@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="exam_type">exam_type <span class="text-danger">*</span> :</label>
+                        <label for="exam_type">Exam type <span class="text-danger">*</span> :</label>
                         <select class="form-control select2" style="width: 100%;" wire:model="exam_type">
                             <option value=""></option>
                             <option value="WASSCE">WASSCE</option>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="subject_type">subject_type <span class="text-danger">*</span> :</label>
+                        <label for="subject_type">Subject Type <span class="text-danger">*</span> :</label>
                         <select class="form-control select2" style="width: 100%;" wire:model="subject_type">
                             <option value=""></option>
                             <option value="CORE">CORE</option>
@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="subject_id">subject <span class="text-danger">*</span> :</label>
+                        <label for="subject_id">Subject <span class="text-danger">*</span> :</label>
                         <select class="form-control select2" style="width: 100%;" wire:model="subject_id">
                             <option value=""></option>
                             @foreach ($subjects as $subject)
