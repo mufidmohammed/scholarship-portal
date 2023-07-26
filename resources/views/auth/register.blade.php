@@ -1,4 +1,10 @@
 <x-guest-layout>
+
+    <div class="text-center pt-4 pb-8">
+        <h1 class="text-xl font-bold">Scholarship Application Portal</h1>
+        <p class="pt-8 text-xl text-slate-500">Registration</p>
+    </div>
+
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
