@@ -14,9 +14,11 @@
         </x-slot>
 
         <x-slot name="content">
-            <x-dropdown-link :href="route('profile.edit')">
-                {{ __('Profile') }}
-            </x-dropdown-link>
+            @unless (Auth::user()->type == 'applicant')
+                <x-dropdown-link :href="route('profile.edit')">
+                    {{ __('Profile') }}
+                </x-dropdown-link>
+            @endunless
 
             <!-- Authentication -->
             <form method="POST" action="{{ route('logout') }}">

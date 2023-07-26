@@ -54,6 +54,6 @@ class Education extends Component
     {
         $education = auth()->user()->education()->get();
 
-        return view('livewire.education', compact('education'));
+        return view('livewire.education', compact('education'))->layout('layouts.main');
     }
 }

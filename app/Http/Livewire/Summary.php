@@ -15,7 +15,7 @@ class Summary extends Component
 
     public function render()
     {
-        return view('livewire.summary');
+        return view('livewire.summary')->layout('layouts.main');
     }
 
     public function submit()
@@ -24,6 +24,6 @@ class Summary extends Component
 
         $this->applicant->save();
 
-        session()->flash('message', 'Your application has been submitted successfully. You can now log out');
+        session()->flash('message', 'Your application has been submitted successfully. You will receive an sms notification once your application is accepted.');
     }
 }

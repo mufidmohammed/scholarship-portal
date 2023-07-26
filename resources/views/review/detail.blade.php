@@ -1,14 +1,15 @@
 <x-app-layout>
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('Applicant Detail') }}
+        {{ __('Applicant Details') }}
     </h2>
 </x-slot>
 
-<div class="py-12">
+<div class="py-12" style="font-family: Nunito">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
+                <x-error-connection></x-error-connection>
                 <x-success-message></x-success-message>
                 <div class="text-xl   font-bold mb-4">Summary</div>
                 {{--   Personal Information   --}}
@@ -44,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-
+                <hr />
                 {{--   Guardian Information   --}}
                 <div class="mt-6">
                     <div class="text-lg font-bold">Guardian Information</div>
@@ -72,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-
+                <hr />
                 {{--   Educational Background   --}}
                 <div class="mt-6">
                     <div class="text-lg font-bold">Educational Background</div>
@@ -98,7 +99,7 @@
                         </div>
                     @endforeach
                 </div>
-
+                <hr />
                 {{--   Exams History   --}}
                 <div class="mt-6">
                     <div class="text-lg font-bold">Exams History</div>
@@ -119,7 +120,7 @@
                         </div>
                     @endforelse
                 </div>
-
+                <hr />
                 {{--   Uploads   --}}
                 <div class="mt-6">
                     <div class="text-lg font-bold">Uploads</div>

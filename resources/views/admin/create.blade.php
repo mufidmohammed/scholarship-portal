@@ -1,54 +1,44 @@
-<x-app-layout>
-    <x-slot name="header">
-        <div class="flex justify-between">
-            <div>
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                    {{ __('Add A Reviewer') }}
-                </h2>
-            </div>
-            <div>
-                @include('layouts.dropdown')
-            </div>
-        </div>
-    </x-slot>
+<x-main-layout>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="py-4">
-                    <x-validation-errors></x-validation-errors>
-                    <form class="w-full" method="post" action="{{ route('admin.store') }}">
+    <div class="content-fluid content-top-gap">
+        
+        <section class="forms">
+            <!-- forms 1 -->
+            <div class="card card_border py-2 mb-4">
+                <div class="cards__heading">
+                    <h3>Add Reviewer</h3>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('admin.store') }}" method="post">
                         @csrf
-                        <div class="flex flex-wrap mx-3 mb-6">
-                            <div class="w-full md:w-1/2 px-3">
-                                <x-input-label for="username" :value="__('Username')"></x-input-label>
-                                <x-text-input name="username"
-                                    class="block mt-1 p-2 w-full border border-indigo-600">
-                                </x-text-input>
-                            </div>
+                        <div class="form-group">
+                            <label for="username" class="input__label">Username</label>
+                            <input type="text" name="username" class="@error('username') is-invalid @enderror form-control input-style" id="username"
+                                placeholder="Enter username">
+                            @error('username')
+                                <small class="form-text text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
-                        <div class="flex flex-wrap mx-3 mb-6">
-                            <div class="w-full md:w-1/2 px-3">
-                                <x-input-label for="email" :value="__('Email')"></x-input-label>
-                                <x-text-input name="email"
-                                    class="block mt-1 p-2 w-full border border-indigo-600">
-                                </x-text-input>
-                            </div>
+                        <div class="form-group">
+                            <label for="email" class="input__label">Email</label>
+                            <input type="email" name="email" class="@error('email') is-invalid @enderror form-control input-style" id="email" placeholder="Enter email">
+                            @error('email')
+                                <small class="form-text text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
-                        <div class="flex flex-wrap mx-3 mb-6">
-                            <div class="w-full md:w-1/2 px-3">
-                                <x-input-label for="password" :value="__('Password')"></x-input-label>
-                                <x-text-input name="password" placeholder="Default: 123456"
-                                    class="block mt-1 p-2 w-full border border-indigo-600">
-                                </x-text-input>
-                            </div>
+                        <div class="form-group">
+                            <label for="password" class="input__label">Password</label>
+                            <input type="text" class="@error('password') is-invalid @enderror form-control input-style" id="password" placeholder="Default: 123456">
+                            @error('password')
+                                <small class="form-text text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
-                        <div class="flex flex-wrap mx-3 mb-6 px-2 pt-2">
-                            <x-primary-button>Add Reviewer</x-primary-button>
-                        </div>
+                        <button type="submit" class="btn btn-primary btn-style mt-4">Add</button>
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
+
     </div>
-</x-app-layout>
+
+</x-main-layout>

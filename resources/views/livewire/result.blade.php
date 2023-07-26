@@ -1,151 +1,104 @@
-<x-slot name="header">
-    <div class="flex justify-between">
-        <div>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Result') }}
-            </h2>
-        </div>
-        <div>
-            @include('layouts.dropdown')
-        </div>
-    </div>
-</x-slot>
-
-<div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <x-success-message></x-success-message>
-            <x-validation-errors></x-validation-errors>
-            <div class="flex">
-                <div class="flex-none w-64 bg-slate-400">
-                    @include('partials.sidebar-menu')
+<div class="content-fluid content-top-gap">
+    <x-success-message></x-success-message>
+    <x-validation-errors></x-validation-errors>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="text-dark font-weight-bold">Results</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exam_type">exam_type <span class="text-danger">*</span> :</label>
+                        <select class="form-control select2" style="width: 100%;" wire:model="exam_type">
+                            <option value=""></option>
+                            <option value="WASSCE">WASSCE</option>
+                            <option value="NOVDEC">NOVDEC</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="flex-1 py-4">
-                    <form class="w-full" method="post">
-                        @csrf
-                        <div class="flex flex-wrap mx-3 mb-6">
-                            <div class="w-full md:w-1/2 px-3">
-                                <x-input-label for="examType" :value="__('Type of Examination')"></x-input-label>
-                                <x-text-select name="exam_type" wire:model="exam_type"
-                                    class="block mt-1 p-2 w-full border border-indigo-600">
-                                    <option value=""></option>
-                                    <option value="WASSCE">WASSCE</option>
-                                    <option value="NOVDEC">NOVDEC</option>
-                                </x-text-input>
-                            </div>
-                            <div class="w-full md:w-1/2 px-3">
-                                <x-input-label for="subject_type" :value="__('Subject Type')"></x-input-label>
-                                <x-text-select name="subject_type" wire:model="subject_type"
-                                    class="block mt-1 p-2 w-full border border-indigo-600">
-                                    <option value=""></option>
-                                    <option value="CORE">CORE</option>
-                                    <option value="ELECTIVE">ELECTIVE</option>
-                                </x-text-select>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap mx-3 mb-6">
-                            <div class="w-full md:w-1/2 px-3">
-                                <x-input-label for="subjectId" :value="__('Subject')"></x-input-label>
-                                <x-text-select name="subject_id" wire:model="subject_id"
-                                    class="block mt-1 p-2 w-full border border-indigo-600">
-                                    <option value=""></option>
-                                    @foreach($subjects as $subject)
-                                        <option value="{{ $subject->id }}">{{ $subject->name }}</option>
-                                    @endforeach
-                                </x-text-select>
-                            </div>
-                            <div class="w-full md:w-1/2 px-3">
-                                <x-input-label for="gradeId" :value="__('Grade')"></x-input-label>
-                                <x-text-select name="grade_id" wire:model="grade_id"
-                                    class="block mt-1 p-2 w-full border border-indigo-600">
-                                    <option value=""></option>
-                                    @foreach($grades as $grade)
-                                        <option value="{{ $grade->id }}">{{ $grade->grade }}</option>
-                                    @endforeach
-                                </x-text-select>
-                            </div>
-                        </div>
-                        <div class="flex justify-between mx-6">
-                            <x-primary-button wire:click.prevent="add">Add</x-primary-button>
-                            <x-primary-button wire:click.prevent="next">Next</x-primary-button>
-                        </div>
-                    </form>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="subject_type">subject_type <span class="text-danger">*</span> :</label>
+                        <select class="form-control select2" style="width: 100%;" wire:model="subject_type">
+                            <option value=""></option>
+                            <option value="CORE">CORE</option>
+                            <option value="ELECTIVE">ELECTIVE</option>
+                        </select>
+                    </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="subject_id">subject <span class="text-danger">*</span> :</label>
+                        <select class="form-control select2" style="width: 100%;" wire:model="subject_id">
+                            <option value=""></option>
+                            @foreach ($subjects as $subject)
+                                <option value="{{ $subject->id }}">{{ $subject->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="grade_id">Grade <span class="text-danger">*</span> :</label>
+                        <select class="form-control select2" style="width: 100%;" wire:model="grade_id">
+                            <option value=""></option>
+                            @foreach ($grades as $grade)
+                                <option value="{{ $grade->id }}">{{ $grade->grade }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mb-4">
+                <button class="btn btn-success" wire:click.prevent="add">Add</button>
+                <button class="btn btn-secondary" wire:click.prevent="next">Next</button>
+            </div>
+
         </div>
     </div>
-    <div class="py-6">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="flex flex-col">
-                        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                                <div class="overflow-hidden">
-                                    <table class="w-full">
-                                        <thead class="bg-white border-b">
-                                        <tr>
 
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                Subject Type
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                Subject
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                Grade
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                Actions
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-
-                                        @forelse($results as $result)
-                                            <tr class="bg-gray-100 border-b">
-
-                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                    {{ $result->subject->type }}
-                                                </td>
-                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                    {{ $result->subject->name }}
-                                                </td>
-                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                    {{ $result->grade->grade }}
-                                                </td>
-
-                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-
-                                                    <button
-                                                        onclick="return confirm('Are you sure you want to delete this result history?') || event.stopImmediatePropagation();"
-                                                        wire:click="destroy({{ $result->id }})"
-                                                        class="hover:bg-red-600 rounded-lg hover:text-white text-red-600 font-semibold border border-red-300 px-4 py-2">
-                                                        Delete
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        @empty
-                                            <tr class="text-center">
-                                                <td colspan="6">
-                                                    <p>No records found</p>
-                                                </td>
-                                            </tr>
-                                        @endforelse
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <div>Results</div>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Subject Type</th>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Grade</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($results as $result)
+                                <tr>
+                                    <td>{{ $result->subject->type }}</td>
+                                    <td>{{ $result->subject->name }}</td>
+                                    <td>{{ $result->grade->grade }}</td>
+                                    <td>
+                                        <button class="btn btn-danger"
+                                            onclick="return confirm('Are you sure you want to delete this education history?') || event.stopImmediatePropagation();"
+                                            wire:click="destroy({{ $result->id }})">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr class="text-center">
+                                    <td colspan="6">
+                                        <p>No records found</p>
+                                    </td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

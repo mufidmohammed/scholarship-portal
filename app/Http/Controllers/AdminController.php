@@ -47,7 +47,7 @@ class AdminController extends Controller
             'type' => 'reviewer'
         ]);
 
-        return to_route('admin.index');
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -80,7 +80,7 @@ class AdminController extends Controller
 
         $reviewer->save();
 
-        return to_route('admin.index');
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -91,5 +91,38 @@ class AdminController extends Controller
         User::destroy($id);
 
         return back();
+    }
+
+    public function dashboard()
+    {
+        $users = User::count() - 1;
+        $reviewers = User::where('type', 'reviewer')->count();
+        $applicants = User::where('type', 'applicant')->where('submitted', true)->count();
+
+        $pending = User::where('type', 'applicant')
+                ->where('submitted', true)
+                ->where('status', 'pending')
+                ->count();
+
+        $granted = User::where('type', 'applicant')
+                ->where('submitted', true)
+                ->where('status', 'granted')
+                ->count();
+
+        $dismissed = User::where('type', 'applicant')
+                ->where('submitted', true)
+                ->where('status', 'dismissed')
+                ->count();
+
+        return view('admin.dashboard', compact('users', 'reviewers', 'applicants', 'pending', 'granted', 'dismissed'));
+    }
+
+    public function applicants()
+    {
+        $applicants = User::where('type', 'applicant')
+                    ->where('submitted', true)
+                    ->get();
+
+        return view('admin.applicants', compact('applicants'));
     }
 }

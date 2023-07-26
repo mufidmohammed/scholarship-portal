@@ -34,7 +34,7 @@ class Result extends Component
 
         $results = auth()->user()->results()->get();
 
-        return view('livewire.result', compact('subjects', 'grades', 'results'));
+        return view('livewire.result', compact('subjects', 'grades', 'results'))->layout('layouts.main');
     }
 
     public function add()

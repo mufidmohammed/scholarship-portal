@@ -63,6 +63,6 @@ class Upload extends Component
     {
         $uploads = $this->user->uploads()->get();
 
-        return view('livewire.upload', compact('uploads'));
+        return view('livewire.upload', compact('uploads'))->layout('layouts.main');
     }
 }

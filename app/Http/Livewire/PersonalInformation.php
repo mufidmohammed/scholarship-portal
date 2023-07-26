@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\View\Components\MainLayout;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use PowerComponents\LivewirePowerGrid\Themes\Components\Layout;
 
 class PersonalInformation extends Component
 {
@@ -52,7 +54,7 @@ class PersonalInformation extends Component
 
     public function render()
     {
-        return view('livewire.personal-information');
+        return view('livewire.personal-information')->layout('layouts.main');
     }
 
     public function save()

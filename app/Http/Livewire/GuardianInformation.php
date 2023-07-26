@@ -20,7 +20,7 @@ class GuardianInformation extends Component
         'firstname' => 'required|string',
         'lastname' => 'required|string',
         'phone_number' => 'required|numeric',
-        'email' => 'required|email',
+        'email' => 'nullable|email',
         'address' => 'required|string',
         'region' => 'required|string',
         'city' => 'required|string',
@@ -45,7 +45,7 @@ class GuardianInformation extends Component
 
     public function render()
     {
-        return view('livewire.guardian');
+        return view('livewire.guardian-information')->layout('layouts.main');
     }
 
     public function save()

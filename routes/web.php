@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Livewire\Detail;
+use App\Models\User;
 use App\Http\Livewire\Result;
 use App\Http\Livewire\Upload;
 use App\Http\Livewire\Summary;
@@ -23,10 +23,6 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
 Route::get('/', function () {
     return redirect()->route('login');
 });;
@@ -40,7 +36,7 @@ Route::middleware(['auth'])->group(function () {
         else if (auth()->user()->type == 'applicant') {
             return redirect()->route('personal');
         } else {
-            return to_route('admin.index');
+            return redirect()->route('admin.dashboard');
         }
     })->name('dashboard');
 
@@ -49,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// applicants
 Route::middleware(['auth', 'is_applicant'])->group(function () {
     Route::get('/personal-information', PersonalInformation::class)->name('personal');
     Route::get('/guardian-information', GuardianInformation::class)->name('guardian');
@@ -58,6 +55,7 @@ Route::middleware(['auth', 'is_applicant'])->group(function () {
     Route::get('/summary', Summary::class)->name('summary');
 });
 
+// reviewers
 Route::middleware(['auth', 'is_reviewer'])->prefix('review')->group(function () {
     Route::get('applicants', [ReviewController::class, 'index'])->name('review.applicants');
     Route::get('applicant/{id}', [ReviewController::class, 'show'])->name('review.detail');
@@ -65,16 +63,21 @@ Route::middleware(['auth', 'is_reviewer'])->prefix('review')->group(function () 
     Route::put('dismiss/{id}', [ReviewController::class, 'dismiss'])->name('review.dismiss');
 
     Route::get('granted', function() {
-        return view('review.granted');
+        $applicants = User::where('status', 'granted')->get();
+        return view('review.granted', compact('applicants'));
     })->name('review.granted');
 
     Route::get('dismissed', function() {
-        return view('review.dismissed');
+        $applicants = User::where('status', 'dismissed')->get();
+        return view('review.dismissed', compact('applicants'));
     })->name('review.dismissed');
 
 });
 
+// admin
 Route::middleware(['auth', 'is_admin'])->group(function () {
+    Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('admin/applicants', [AdminController::class, 'applicants'])->name('admin.applicants');
     Route::resource('admin', AdminController::class)->except('show');
 });
 
