@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <span class="text-danger text-sm">
-                        *Accepted format: pdf,jpeg,jpg,png files only <br />
+                        *Accepted format: pdf,docx files only <br />
                         NB: Choose the appropriate document type for the file
                     </span><br>
                     <div class="py-4 px-2">
