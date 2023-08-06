@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="middlename">Other Names :</label>
+                        <label for="middlename">Middle Name :</label>
                         <input type="text" class="form-control" id="middlename" name="middlename"
                             wire:model="middlename">
                     </div>
@@ -88,6 +88,13 @@
                         <label for="financial_need">Financial Need <span class="text-danger">*</span> :</label>
                         <input type="text" class="form-control" id="financial_need" name="financial_need"
                             wire:model="financial_need">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="profile">Uplaod profile picture <span class="text-danger">*</span> :</label>
+                        <input type="file" class="form-control" id="profile" name="profile"
+                            wire:model="profile">
                     </div>
                 </div>
             </div>

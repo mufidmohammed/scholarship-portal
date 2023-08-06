@@ -2,7 +2,7 @@
 
     <!-- logo start -->
     <div class="logo">
-        <h1><a href="index.html">Portal</a></h1>
+        <h1><a href="">Portal</a></h1>
     </div>
 
     <div class="logo-icon text-center">

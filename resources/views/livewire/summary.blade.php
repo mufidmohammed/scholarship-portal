@@ -4,7 +4,14 @@
             <section>
                 <h4 class="text-dark font-weight-bold">Summary</h4>
                 <span class="text-danger">Summary(Review the information you provided and click on
-                    the Submit Application button below to submit)</span>
+                    the Submit Application button below to submit)
+                </span>
+                <div class="d-flex justify-content-center">
+                    <div class="">
+                        <img class="rounded mx-auto d-block" width="200" height="200"
+                         src="{{ Storage::url($applicant->personalInformation?->profile) }}" alt="profile image">
+                    </div>
+                </div>
                 <hr>
                 <h5 class="text-dark font-weight-bold">Personal Information</h5>
                 <div class="row">

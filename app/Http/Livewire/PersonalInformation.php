@@ -2,13 +2,15 @@
 
 namespace App\Http\Livewire;
 
-use App\View\Components\MainLayout;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
-use PowerComponents\LivewirePowerGrid\Themes\Components\Layout;
+use Illuminate\Support\Facades\Storage;
 
 class PersonalInformation extends Component
 {
+    use WithFileUploads;
+
     public $firstname;
     public $lastname;
     public $middlename;
@@ -20,6 +22,7 @@ class PersonalInformation extends Component
     public $region;
     public $city;
     public $financial_need;
+    public $profile;
 
     protected $rules = [
         'firstname' => 'required|string',
@@ -32,7 +35,8 @@ class PersonalInformation extends Component
         'date_of_birth' => 'required|string',
         'region' => 'required|string',
         'city' => 'required|string',
-        'financial_need' => 'required|string'
+        'financial_need' => 'required|string',
+        'profile' => 'required|image'
     ];
 
     public function mount()
@@ -50,6 +54,7 @@ class PersonalInformation extends Component
         $this->region = $info->region ?? '';
         $this->city = $info->city ?? '';
         $this->financial_need = $info->financial_need ?? '';
+        $this->profile = $info->profile ?? '';
     }
 
     public function render()
@@ -63,10 +68,33 @@ class PersonalInformation extends Component
 
         $validated = $this->validate();
 
-        \App\Models\PersonalInformation::updateOrCreate(
-            ['user_id' => $applicant->id], $validated
-        );
+        $info = $applicant->personalInformation()->first();
 
+        if ($info)
+        {
+            $info->firstname = $this->firstname;
+            $info->lastname = $this->lastname;
+            $info->middlename = $this->middlename;
+            $info->phone_number = $this->phone_number;
+            $info->email = $this->email;
+            $info->address = $this->address;
+            $info->gender = $this->gender;
+            $info->date_of_birth = $this->date_of_birth;
+            $info->region = $this->region;
+            $info->city = $this->city;
+            $info->financial_need = $this->financial_need;
+            $info->profile = '';
+            if ($info->profile)
+                Storage::disk('local')->delete($info->profile);
+
+            $info->profile = $this->profile->store('public/profile');
+            $info->save();
+        }
+        else {
+            $new = $applicant->personalInformation()->create($validated);
+            $new->profile = $this->profile->store('public/profile');
+            $new->save();
+        }
         session()->flash('message', 'Personal information updated successfully');
     }
 

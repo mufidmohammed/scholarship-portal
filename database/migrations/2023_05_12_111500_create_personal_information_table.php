@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('date_of_birth');
             $table->string('city');
             $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('profile');
             $table->timestamps();
         });
     }

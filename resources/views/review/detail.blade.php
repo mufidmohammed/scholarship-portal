@@ -12,6 +12,10 @@
                 <x-error-connection></x-error-connection>
                 <x-success-message></x-success-message>
                 <div class="text-xl   font-bold mb-4">Summary</div>
+                <div>
+                    <img class="w-24 h-24 rounded mx-auto"  alt="" width="200" height="200"
+                     src="{{ Storage::url($applicant->personalInformation?->profile) }}" alt="profile image">
+                </div>
                 {{--   Personal Information   --}}
                 <div class="mt-6">
                     <div class="text-lg font-bold my-3">Personal Information</div>
