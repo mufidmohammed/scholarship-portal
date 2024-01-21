@@ -9,7 +9,9 @@
                 <div class="d-flex justify-content-center">
                     <div class="">
                         <img class="rounded mx-auto d-block" width="200" height="200"
-                         src="{{ Storage::url($applicant->personalInformation?->profile) }}" alt="profile image">
+                         src="{{ $applicant->personalInformation ?
+                            Storage::url($applicant->personalInformation->profile) :
+                            asset('assets/images/profile.jpg') }}" alt="profile image">
                     </div>
                 </div>
                 <hr>

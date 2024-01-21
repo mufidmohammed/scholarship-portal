@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="position_held">Position held <span class="text-danger">*</span> :</label>
+                        <label for="position_held">Position held:</label>
                         <input type="text" class="form-control" id="position_held" value="{{ $position_held }}"
                             wire:model="position_held">
                     </div>

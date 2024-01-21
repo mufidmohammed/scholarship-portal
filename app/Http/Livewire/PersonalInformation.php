@@ -35,7 +35,7 @@ class PersonalInformation extends Component
         'date_of_birth' => 'required|string',
         'region' => 'required|string',
         'city' => 'required|string',
-        'financial_need' => 'required|string',
+        'financial_need' => 'required|numeric',
         'profile' => 'required|image'
     ];
 

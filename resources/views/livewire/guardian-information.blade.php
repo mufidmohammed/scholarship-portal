@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="email">Email <span class="text-danger">*</span> :</label>
+                            <label for="email">Email:</label>
                             <input type="text" class="form-control" id="email" name="email"
                                 value="{{ $email }}" wire:model="email">
                         </div>
