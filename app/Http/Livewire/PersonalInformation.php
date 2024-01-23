@@ -28,7 +28,7 @@ class PersonalInformation extends Component
         'firstname' => 'required|string',
         'lastname' => 'required|string',
         'middlename' => 'nullable|string',
-        'phone_number' => 'required|numeric|min:10',
+        'phone_number' => 'required|numeric|digits:10',
         'email' => 'required|email',
         'address' => 'required|string',
         'gender' => 'required|string',

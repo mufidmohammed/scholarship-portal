@@ -14,7 +14,10 @@
                 <div class="text-xl   font-bold mb-4">Summary</div>
                 <div>
                     <img class="w-24 h-24 rounded mx-auto"  alt="" width="200" height="200"
-                     src="{{ Storage::url($applicant->personalInformation?->profile) }}" alt="profile image">
+                     src="{{ $applicant->personalInformation ?
+                             Storage::url($applicant->personalInformation?->profile) :
+                             asset('assets/images/profile.jpg')
+                        }}" alt="profile image">
                 </div>
                 {{--   Personal Information   --}}
                 <div class="mt-6">

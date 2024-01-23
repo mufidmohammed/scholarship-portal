@@ -236,6 +236,7 @@
                 </button>
             </section>
         </div>
+        <x-error-message></x-error-message>
         <x-success-message></x-success-message>
     </div>
 </div>

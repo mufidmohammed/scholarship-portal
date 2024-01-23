@@ -62,15 +62,13 @@ Route::middleware(['auth', 'is_reviewer'])->prefix('review')->group(function () 
     Route::put('grant/{id}', [ReviewController::class, 'grant'])->name('review.grant');
     Route::put('dismiss/{id}', [ReviewController::class, 'dismiss'])->name('review.dismiss');
 
-    Route::get('granted', function() {
-        $applicants = User::where('status', 'granted')->get();
-        return view('review.granted', compact('applicants'));
-    })->name('review.granted');
+    Route::get('granted', [ReviewController::class, 'grantedApplicants'])->name('review.granted');
+    Route::get('dismissed', [ReviewController::class, 'dismissedApplicants'])->name('review.dismissed');
 
-    Route::get('dismissed', function() {
-        $applicants = User::where('status', 'dismissed')->get();
-        return view('review.dismissed', compact('applicants'));
-    })->name('review.dismissed');
+    // Route::get('dismissed', function() {
+    //     $applicants = User::where('status', 'dismissed')->get();
+    //     return view('review.dismissed', compact('applicants'));
+    // })->name('review.dismissed');
 
 });
 
