@@ -16,7 +16,7 @@
         <!-- sidebar nav start -->
         <ul class="nav nav-pills nav-stacked custom-nav">
             <li class="@if(request()->routeIs('review.applicants')) active @endif">
-                <a href="{{ route('review.applicants') }}"><i class="fa fa-tachometer"></i><span> All Applicants</span>
+                <a href="{{ route('review.applicants') }}"><i class="fa fa-tachometer"></i><span> Pending</span>
                 </a>
             </li>
             {{-- <li><a href="{{ route('admin.create') }}"><i class="fa fa-table"></i> <span>add reviewers</span></a></li> --}}

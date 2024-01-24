@@ -16,7 +16,6 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Phone Number</th>
-                                <th scope="col">Status</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -27,7 +26,6 @@
                                     <td>{{ $applicant->personalInformation?->firstname . ' ' . $applicant->personalInformation?->middlename . ' ' . $applicant->personalInformation?->lastname }}</td>
                                     <td>{{ $applicant->personalInformation?->email }}</td>
                                     <td>{{ $applicant->personalInformation?->phone_number }}</td>
-                                    <td>{{ $applicant->status }}</td>
                                     <td>
                                         <a href="{{ route('review.detail', $applicant->id) }}" class="btn btn-primary">view</a>
                                     </td>

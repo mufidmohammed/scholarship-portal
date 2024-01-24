@@ -38,10 +38,10 @@ class ReviewController extends Controller
         }
 
         $applicant->status = 'granted';
+        $applicant->reviewer_id = auth()->id();
         $applicant->save();
 
-        auth()->user()->reviews()->updateOrCreate(['user_id' => $applicant->id]);
-
+        // send sms notification
         $phone_number = $applicant->personalInformation->phone_number;
         $lastname = $applicant->personalInformation->lastname;
         $financial_need = $applicant->personalInformation->financial_need;
@@ -55,10 +55,10 @@ class ReviewController extends Controller
     public function grantedApplicants()
     {
         $id = auth()->id();
-        $applicants = User::leftjoin('reviews', 'users.id', '=', 'reviews.reviewer_id')
+
+        $applicants = User::where('reviewer_id', $id)
             ->where('type', 'applicant')
             ->where('status', 'granted')
-            ->select('users.*')
             ->get();
 
         return view('review.granted', compact('applicants'));
@@ -67,10 +67,11 @@ class ReviewController extends Controller
     public function dismiss($id)
     {
         $applicant = User::find($id);
-        $applicant->status = 'dismissed';
-        $applicant->save();
 
-        auth()->user()->reviews()->updateOrCreate(['user_id' => $applicant->id]);
+        $applicant->status = 'dismissed';
+        $applicant->reviewer_id = auth()->id();
+
+        $applicant->save();
 
         return redirect()->route('review.applicants')
             ->with('message', "Scholarship request for {$applicant->username} dismissed successfully");
@@ -80,16 +81,12 @@ class ReviewController extends Controller
     {
         $id = auth()->id();
 
-        $applicants = User::join('reviews', 'users.id', '=', 'reviews.user_id')
-            // ->where('reviews.reviewer_id', $id)
-            ->where('users.type', 'applicant')
-            ->where('users.status', 'dismissed')
-            // ->select('users.*')
+        $applicants = User::where('reviewer_id', $id)
+            ->where('type', 'applicant')
+            ->where('status', 'dismissed')
             ->get();
 
-        dd($applicants);
-
-        return view('review.granted', compact('applicants'));
+        return view('review.dismissed', compact('applicants'));
     }
 
     public function send_sms_notification($phone_number, $name, $financial_need)

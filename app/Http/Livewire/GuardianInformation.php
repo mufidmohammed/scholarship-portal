@@ -19,7 +19,7 @@ class GuardianInformation extends Component
     protected $rules = [
         'firstname' => 'required|string',
         'lastname' => 'required|string',
-        'phone_number' => 'required|numeric',
+        'phone_number' => 'required|numeric|digits:10',
         'email' => 'nullable|email',
         'address' => 'required|string',
         'region' => 'required|string',

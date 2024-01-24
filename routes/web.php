@@ -64,12 +64,6 @@ Route::middleware(['auth', 'is_reviewer'])->prefix('review')->group(function () 
 
     Route::get('granted', [ReviewController::class, 'grantedApplicants'])->name('review.granted');
     Route::get('dismissed', [ReviewController::class, 'dismissedApplicants'])->name('review.dismissed');
-
-    // Route::get('dismissed', function() {
-    //     $applicants = User::where('status', 'dismissed')->get();
-    //     return view('review.dismissed', compact('applicants'));
-    // })->name('review.dismissed');
-
 });
 
 // admin

@@ -95,14 +95,4 @@ class User extends Authenticatable
     {
         return $this->hasMany(Upload::class);
     }
-
-    /**
-     * Get all of the reviews for the User
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function reviews(): HasMany
-    {
-        return $this->hasMany(Review::class, 'reviewer_id');
-    }
 }
